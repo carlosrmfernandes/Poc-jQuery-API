@@ -1,15 +1,14 @@
 $(document).ready(function(){
-  $("#buscar").click(function(){        
+  $("#btn-cep").click(function(){
+    let cep = $('#cep').val();
+
     var settings = {
-        "url": '',
+        "url": `https://viacep.com.br/ws/${cep}/json/`,
         "method": "GET",            
       };
       
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-        
+      $.ajax(settings).done(function (response) {   
       });
 });
 
 });
-
